@@ -1,0 +1,230 @@
+section
+  .container.redirect
+    i.fa.fa-long-arrow-left.fa-fw
+    a. [href="home" class="info-link"] Domů
+
+    #main_info  
+      h2 Rozšířené vyhledávání podle druhu subjektu
+      p.search_info
+        'Klikněte níže na druh subjektu podle kterého chcete vyhledávat.
+      p.search_info
+        'Následně je pak možno tyto subjekty vyhledat na ty blízko vás či dle:
+      ul.ul-list
+        li druhu sociální služby (platí pro subjekty poskytující sociální služby)
+        li druhu akreditované osoby (platí pro akreditované subjekty)
+        li evidenčního čísla (platí pro advokáty)
+        li označení (platí pro střediska probační a mediační služby)
+ 
+    #subject_picker
+      h3 Vyberte prosím druh subjektu
+      .picker_tablist
+        ul.nav.nav-tabs id="subjects" role="tablist"
+          li.nav-item
+            a. [class="nav-link active" id="social-tab" data-toggle="tab" href="#social" role="tab" aria-controls="social" aria-selected="true"] Subjekty poskytující sociální služby
+          li.nav-item
+            a. [class="nav-link" id="akredit-tab" data-toggle="tab" href="#akredit" role="tab" aria-controls="akredit" aria-selected="false"] Akreditované subjekty
+          li.nav-item
+            a. [class="nav-link" id="advokat-tab" data-toggle="tab" href="#advokat" role="tab" aria-controls="advokat" aria-selected="false"] Advokáti
+          li.nav-item
+            a. [class="nav-link" id="pms-tab" data-toggle="tab" href="#pms" role="tab" aria-controls="pms" aria-selected="false"] Střediska probační a mediační služby  
+
+
+        .tab-content#subjectsContent role="tablist"
+          .card.tab-pane.fade.show.active id="social" role="tabpanel" aria-labelledby="social-tab"
+            .card-header role="tab" id="social"
+              .h5.mb-0
+                a data-toggle="collapse" href="#collapse-social" data-parent="#content" aria-expanded="true" aria-controls="collapse-social" Subjekty poskytující sociální služby
+
+            .collapse#collapse-social role="tabpanel" aria-labelledby="heading-A"
+              .card-body
+                form
+                  .form-group
+                    label for="verejne_id" Veřejné ID
+                    input type="text" class="form-control" id="verejne_id" aria-describedby="emailHelp" placeholder="např. SZZ000001"
+                  .form-group
+                    label for="social_name" Název/Jméno
+                    input type="text" class="form-control" id="social_name" aria-describedby="emailHelp" placeholder="např. pomoc"
+                  .form-group
+                    label for="ico" IČO
+                    input type="text" class="form-control" id="ico" aria-describedby="emailHelp" placeholder="např. 20610000"
+                  .form-group
+                    label for="service_type" Druh sociální služby
+                    select.form-control#service_type
+                      option 1
+                      option 2
+                      option 3
+                      option 4
+                  .form-group
+                    label for="area" Obec
+                    input type="text" class="form-control" id="area" aria-describedby="emailHelp" placeholder="např. Bílina"
+                  .form-group
+                    label for="district" Okres
+                    select.form-control#district
+                      option 1
+                      option 1
+                      option 1
+                      option 1
+                  .form-group
+                    label for="region" Kraj
+                    select.form-control#region
+                      option 1
+                      option 1
+                      option 1
+                      option 1
+                  button type="submit" class="btn btn-danger" Hledat
+
+          .card.tab-pane.fade id="akredit" role="tabpanel" aria-labelledby="akredit-tab"
+            .card.tab-pane.fade.show.active id="akredit" role="tabpanel" aria-labelledby="akredit-tab"
+              .card-header role="tab" id="akredit"
+                .h5.mb-0
+                  a data-toggle="collapse" href="#collapse-akredit" data-parent="#content" aria-expanded="true" aria-controls="collapse-akredit" Akreditované subjekty
+
+              .collapse#collapse-akredit role="tabpanel" aria-labelledby="heading-A"
+                .card-body
+                  form
+                    .form-group
+                      label for="verejne_id" Veřejné ID
+                      input type="text" class="form-control" id="verejne_id" aria-describedby="emailHelp" placeholder="např. SZZ000001"
+                    .form-group
+                      label for="social_name" Název/Jméno
+                      input type="text" class="form-control" id="social_name" aria-describedby="emailHelp" placeholder="např. pomoc"
+                    .form-group
+                      label for="ico" IČO
+                      input type="text" class="form-control" id="ico" aria-describedby="emailHelp" placeholder="např. 20610000"
+                    .form-group
+                      label for="alias" Označení
+                      input type="text" class="form-control" id="alias" aria-describedby="emailHelp" placeholder="např. 20610000"
+                    .form-group
+                      label for="akredit_type" Druh akreditované služby
+                      select.form-control#akredit_type
+                        option 1
+                        option 2
+                        option 3
+                        option 4
+                    .form-group
+                      label for="area" Obec
+                      input type="text" class="form-control" id="area" aria-describedby="emailHelp" placeholder="např. Bílina"
+                    .form-group
+                      label for="district" Okres
+                      select.form-control#district
+                        option 1
+                        option 1
+                        option 1
+                        option 1
+                    .form-group
+                      label for="region" Kraj
+                      select.form-control#region
+                        option 1
+                        option 1
+                        option 1
+                        option 1
+                    button type="submit" class="btn btn-danger" Hledat
+
+          .card.tab-pane.fade id="advokat" role="tabpanel" aria-labelledby="advokat-tab"
+            .card.tab-pane.fade.show.active id="advokat" role="tabpanel" aria-labelledby="advokat-tab"
+            .card-header role="tab" id="advokat"
+              .h5.mb-0
+                a data-toggle="collapse" href="#collapse-advokat" data-parent="#content" aria-expanded="true" aria-controls="collapse-advokat"Advokáti
+                
+            .collapse#collapse-advokat role="tabpanel" aria-labelledby="heading-A"
+              .card-body
+                form
+                  .form-group
+                    label for="verejne_id" Veřejné ID
+                    input type="text" class="form-control" id="verejne_id" aria-describedby="emailHelp" placeholder="např. SZZ000001"
+                  .form-group
+                    label for="social_name" Název/Jméno
+                    input type="text" class="form-control" id="social_name" aria-describedby="emailHelp" placeholder="např. pomoc"
+                  .form-group
+                    label for="ico" IČO
+                    input type="text" class="form-control" id="ico" aria-describedby="emailHelp" placeholder="např. 20610000"
+                  .form-group
+                    label for="ev_number" Evidenční číslo
+                    input type="text" class="form-control" id="ev_number" aria-describedby="emailHelp" placeholder="např. 20610000"
+                  .form-group
+                    label for="area" Obec
+                    input type="text" class="form-control" id="area" aria-describedby="emailHelp" placeholder="např. Bílina"
+                  .form-group
+                    label for="district" Okres
+                    select.form-control#district
+                      option 1
+                      option 1
+                      option 1
+                      option 1
+                  .form-group
+                    label for="region" Kraj
+                    select.form-control#region
+                      option 1
+                      option 1
+                      option 1
+                      option 1
+                  button type="submit" class="btn btn-danger" Hledat
+
+          .card.tab-pane.fade id="pms" role="tabpanel" aria-labelledby="pms-tab"
+            .card.tab-pane.fade.show.active id="pms" role="tabpanel" aria-labelledby="pms-tab"
+            .card-header role="tab" id="pms"
+              .h5.mb-0
+                a data-toggle="collapse" href="#collapse-pms" data-parent="#content" aria-expanded="true" aria-controls="collapse-pms" Střediska probační a mediační služby  
+
+            .collapse#collapse-pms role="tabpanel" aria-labelledby="heading-A"
+              .card-body
+                form
+                  .form-group
+                    label for="verejne_id" Veřejné ID
+                    input type="text" class="form-control" id="verejne_id" aria-describedby="emailHelp" placeholder="např. SZZ000001"
+                  .form-group
+                    label for="social_name" Název/Jméno
+                    input type="text" class="form-control" id="social_name" aria-describedby="emailHelp" placeholder="např. pomoc"
+                  .form-group
+                    label for="ico" IČO
+                    input type="text" class="form-control" id="ico" aria-describedby="emailHelp" placeholder="např. 20610000"
+                  .form-group
+                    label for="alias" Označení
+                    input type="text" class="form-control" id="alias" aria-describedby="emailHelp" placeholder="např. 20610000"
+                  .form-group
+                    label for="area" Obec
+                    input type="text" class="form-control" id="area" aria-describedby="emailHelp" placeholder="např. Bílina"
+                  .form-group
+                    label for="district" Okres
+                    select.form-control#district
+                      option 1
+                      option 1
+                      option 1
+                      option 1
+                  .form-group
+                    label for="region" Kraj
+                    select.form-control#region
+                      option 1
+                      option 1
+                      option 1
+                      option 1
+                  button type="submit" class="btn btn-danger" Hledat
+
+section#search_table
+  #inner_search_table
+    h3 3 výsledky
+      small.text-muted s názvem/jménem
+    h3 POMOC
+    table.table.table-striped
+      thead
+        tr
+          th scope="col" #
+          th scope="col" First
+          th scope="col" Last
+          th scope="col" Handle
+      tbody
+        tr
+          th scope="row" 1
+          td Mark
+          td Otto
+          td @mdo
+        tr
+          th scope="row" 2  
+          td Jacob
+          td Thornton
+          td @fat
+        tr
+          th scope="row" 3
+          td Larry
+          td the Bird
+          td @twitter

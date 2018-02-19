@@ -1,0 +1,123 @@
+- content_for(:title) do
+  JarkoSekundoJakSvine
+section
+  .container
+    .row
+      .col-md-6.col-4
+        .redirect
+          i.fa.fa-long-arrow-left.fa-fw
+          a. [href="home" class="info-link"] Domů
+      .col-md-6.text-right.col-8
+        .redirect
+          a. [href="advanced_search" class="info-link"] Rozšířené vyhledávání
+  .container#search-results-bar
+    form.form-inline
+      p#searched
+        strong Nalezené výsledky (2) pro
+      input.form-control.form-control.w-50 [type="search" placeholder="novak" aria-label="Search" title="Hledat"]
+      button.btn.btn-danger [type="submit"] 
+        'Hledat znovu
+        i.fa.fa-long-arrow-right.fa-fw
+    / .row
+    /   .col-md-3
+    /     p#searched
+    /       strong Nalezené výsledky (2) pro
+    /   .col-md-9
+    /     form.form-inline
+    /       input.form-control.form-control.w-75 [type="search" placeholder="Hledat podle jména, názvu, veřejného ID" aria-label="Search" title="Hledat"]
+    /       button.btn.btn-danger [type="submit"] 
+    /         'Hledat znovu
+    /         i.fa.fa-long-arrow-right.fa-fw
+  .container#results
+    .row
+      .col-md-4#filter_card
+        .row
+          .col-12
+            .filter-heading
+              h5#filter Filtrování výsledků:
+          .col-12 
+           .accordion#accordion
+            .card
+              .card-heading.card-header role="tab"
+                a. [id="card-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed"]
+                  Item Podle druhu subjektu
+              .card-block.collapse.show#collapseOne
+                .card-body#filter
+                  .custom-control.custom-checkbox
+                    input type="checkbox" class="custom-control-input" id="socialCheck"
+                    label class="custom-control-label" for="socialCheck" 
+                    'Subjekty poskytující sociální služby
+                  .custom-control.custom-checkbox
+                    input type="checkbox" class="custom-control-input" id="akreditCheck"
+                    label class="custom-control-label" for="akreditCheck" 
+                    'Akreditované subjekty
+                  .custom-control.custom-checkbox
+                    input type="checkbox" class="custom-control-input" id="advokatCheck"
+                    label class="custom-control-label" for="advokatCheck" 
+                    'Advokáti
+                  .custom-control.custom-checkbox
+                    input type="checkbox" class="custom-control-input" id="pmsCheck"
+                    label class="custom-control-label" for="pmsCheck" 
+                    'Střediska probační a mediační služby
+      .col-md-8
+        .results_cards
+          .card.mx-auto
+            .card-body
+              h4.card-title
+                a. [href="entity" class="btn-block"] 
+                  'JUDr. Jan Novák
+                  i.fa.fa-long-arrow-right.fa-fw 
+
+              / .row
+              /   .col-md-8
+              /     a. [href="entity" class="card-link"] JUDr. Jan Novák
+              /   .col-md-4.text-right
+              /     a. [href="entity" class="card-link"]
+              /       'Více informací
+              /       i.fa.fa-long-arrow-right.fa-fw          
+              .card-info
+                .row
+                  .col-md-5
+                    p.card-text
+                      strong Druh subjektu:
+                  .col-md-7
+                    p.card-text advokát
+                .row
+                  .col-md-5
+                    p.card-text 
+                      strong Evidenční číslo:
+                  .col-md-7
+                    p.card-text 14231
+                .row
+                  .col-md-5
+                    p.card-text 
+                      strong Sídlo:
+                  .col-md-7
+                    p.card-text Sokolská třída 936, Ostrava
+              
+          .card.mx-auto
+            .card-body
+              h4.card-title
+                a. [href="entity" class="btn-block"] 
+                  'JUDr. Jakub Novák
+                  i.fa.fa-long-arrow-right.fa-fw 
+
+              .card-info
+                .row
+                  .col-md-5
+                    p.card-text
+                      strong Druh subjektu:
+                  .col-md-7
+                    p.card-text akreditovaný subjekt
+                .row
+                  .col-md-5
+                    p.card-text 
+                      strong Evidenční číslo:
+                  .col-md-7
+                    p.card-text 14231
+                .row
+                  .col-md-5
+                    p.card-text 
+                      strong Sídlo:
+                  .col-md-7
+                    p.card-text Sokolská třída 936, Ostrava
