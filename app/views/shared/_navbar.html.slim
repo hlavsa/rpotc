@@ -1,6 +1,13 @@
 nav.navbar.navbar-light.navbar-expand.bg-faded
-      a. [href="/" class="navbar-brand.mr-0.mr-md-2"]
-        = image_tag('obeti-logo.svg', class: 'style_image')
-      button.navbar-toggler [type="button" data-toggle="collapse" data-target="#collapsingNavbar3"]
-        span.navbar-toggler-icon
-      .navbar-collapse.collapse id="collapsingNavbar3"
+  a. [href="/" class="navbar-brand.mr-0.mr-md-2"]
+    = image_tag('obeti-logo.svg', class: 'style_image')
+  button.navbar-toggler [type="button" data-toggle="collapse" data-target="#collapsingNavbar"]
+    span.navbar-toggler-icon
+
+  .collapse.navbar-collapse id="collapsingNavbar"
+    ul.navbar-nav.ml-auto
+      li.nav-item
+          a class="nav-link" href="#" Žádost o akreditaci 
+          span class="sr-only" Žádost o akreditaci
+      li.nav-item
+          a class="nav-link" href="#" Legislativa

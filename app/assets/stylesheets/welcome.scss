@@ -16,6 +16,8 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em; /* 1em = 16px */
   color: #3b3b3b;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
 }
 
 
@@ -62,6 +64,11 @@ h3 {
   font-size: 1.688em;
   line-height: 1.04;
   font-family: 'Roboto Condensed', sans-serif;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 30px;
+    margin-bottom: 20px;
+  }
 }
 
 h3#entity_name {  
@@ -82,6 +89,15 @@ h3#footer_entity_name {
   @include media-breakpoint-down(sm) {
     font-size: 1.188em;
   }
+}
+
+h4#entity_info {
+  padding-top: 10px;
+  margin-bottom: 40px;
+  padding-left: 0.5rem;
+  font-size: 1.188em;
+  line-height: 1.04;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 h5#register {
@@ -188,7 +204,6 @@ h5#register {
   }
 }
 
-
 form {
   margin-bottom: 20px;
   // font-size: 1.188em;
@@ -223,7 +238,6 @@ input.form-control {
   }
 }
 
-
 button.btn {
   border-radius: 0;
 }
@@ -247,11 +261,11 @@ a:hover {
 }
 
 a:active {
-  border: 3px solid #ffa834 !important;
+  outline: 3px solid #ffa834 !important;
 }
 
 a:focus {
-  border: 3px solid #ffa834 !important;
+  outline: 3px solid #ffa834 !important;
 }
 
 p.search_info {
@@ -293,19 +307,22 @@ li {
 }
 
 .info-link:active {
-    border: 0.250rem solid #ffa834 !important;
+  outline: 0.250rem solid #ffa834 !important;
 }
 
 .redirect {
   padding-top: 20px;
 }
 
+
+/* advanced search */
+
 .nav-tabs {
   border-bottom: 1px solid #3b3b3b;
 }
 
 .nav-link {
-  color: 0000FF;
+  color: #0000FF;
 }
 
 .nav-tabs .nav-link {
@@ -339,10 +356,6 @@ section#search_table {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
   padding: 3em;
 }
-
-// .search_results {
-//   display: flex;
-// }
 
 .container#results {
   padding-top: 20px;
@@ -396,7 +409,7 @@ h5#filter {
 .card-header {
   cursor: pointer;
   border-bottom: 0px;
-  background-color: #fff;
+  // background-color: #fff;
   color: #3b3b3b;
 }
 
@@ -408,14 +421,14 @@ h5#filter {
   margin-bottom: 0px !important;
 }
 
-.accordion .card-header:after {
+.card-header:after {
   font-family: 'FontAwesome';  
   content: "\f068";
   color: #3b3b3b;
   float: right; 
 }
 
-.accordion .card-header.collapsed:after {
+.card-header.collapsed:after {
   font-family: 'FontAwesome';  
   content: "\f067";
   color: #3b3b3b;
@@ -436,31 +449,6 @@ h5#filter {
 
 label.custom-control-label:hover {
   cursor: pointer;
-}
-
-a.collapsed {
-  color: #3b3b3b;
-}
-
-a.collapsed:hover {
-  color: #3b3b3b;
-}
-
-a.collapsed:visited {
-  color: #3b3b3b;
-}
-
-a#card-heading {
-  color: #3b3b3b;
-}
-
-h4#entity_info {
-  padding-top: 10px;
-  margin-bottom: 40px;
-  padding-left: 0.5rem;
-  font-size: 1.188em;
-  line-height: 1.04;
-  font-family: 'Roboto Condensed', sans-serif;
 }
 
 Item#entity {
@@ -495,41 +483,79 @@ Item#entity {
   margin-bottom: 20px;
 }
 
-.nav-tabs {
-  display:none;
+.nav-tabs#subjects {
+  display: none;
 }
 
-@media(min-width:768px) {
-  .nav-tabs  {
+@include media-breakpoint-up(lg) {
+  .nav-tabs#subjects  {
     display: flex;
   }
 
-  .card {
+  .card .subjects_tabs {
     border: none;
     background-color: #eaf0f5;
   }
 
-  .card .card-header {
-    display:none;
+  .card .card-header .subjects_tabs {
+    display: none;
   }  
 
-  .card .collapse{
-    display:block;
+  .card .subjects_tabs .collapse {
+    display: block;
   }
 }
 
-@media(max-width:768px){
+@include media-breakpoint-down(md) {
   .tab-pane {
     display: block !important;
     opacity: 1;
   }
 }
 
-.picker_tablist {
-  margin-bottom: 20px;
-}
-
 .card {
   border: 0 !important;
   margin-bottom: 10px;
+}
+
+a#search_card_link {
+  color: #3b3b3b;
+}
+
+a#search_card_link:focus {
+  color: #0000FF;
+}
+
+a#card_heading {
+  color: #3b3b3b;
+}
+
+a#card_heading:hover {
+  color: #0000FF;
+}
+
+a#card_heading:focus {
+  color: #0000FF;
+}
+
+.form-control#advanced_search_bar {
+  width: 50%;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}
+
+.collapsable_wrapper {
+  display: none;
+}
+
+@include media-breakpoint-down(sm) {
+  .collapsable_wrapper {
+    display: inline;
+  }
+
+  .filters_wrapper {
+    display: none;
+  }
 }

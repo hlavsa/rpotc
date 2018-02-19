@@ -14,7 +14,7 @@ section
     form.form-inline
       p#searched
         strong Nalezené výsledky (2) pro
-      input.form-control.form-control.w-50 [type="search" placeholder="novak" aria-label="Search" title="Hledat"]
+      input.form-control.form-control [type="search" placeholder="novak" aria-label="Search" title="Hledat" id="advanced_search_bar"]
       button.btn.btn-danger [type="submit"] 
         'Hledat znovu
         i.fa.fa-long-arrow-right.fa-fw
@@ -29,36 +29,68 @@ section
     /         'Hledat znovu
     /         i.fa.fa-long-arrow-right.fa-fw
   .container#results
-    .row
-      .col-md-4#filter_card
-        .row
-          .col-12
-            .filter-heading
-              h5#filter Filtrování výsledků:
-          .col-12 
-           .accordion#accordion
-            .card
-              .card-heading.card-header role="tab"
-                a. [id="card-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed"]
-                  Item Podle druhu subjektu
-              .card-block.collapse.show#collapseOne
-                .card-body#filter
-                  .custom-control.custom-checkbox
-                    input type="checkbox" class="custom-control-input" id="socialCheck"
-                    label class="custom-control-label" for="socialCheck" 
-                    'Subjekty poskytující sociální služby
-                  .custom-control.custom-checkbox
-                    input type="checkbox" class="custom-control-input" id="akreditCheck"
-                    label class="custom-control-label" for="akreditCheck" 
-                    'Akreditované subjekty
-                  .custom-control.custom-checkbox
-                    input type="checkbox" class="custom-control-input" id="advokatCheck"
-                    label class="custom-control-label" for="advokatCheck" 
-                    'Advokáti
-                  .custom-control.custom-checkbox
-                    input type="checkbox" class="custom-control-input" id="pmsCheck"
-                    label class="custom-control-label" for="pmsCheck" 
-                    'Střediska probační a mediační služby
+    .collapsable_wrapper Filtrovat v7sledky
+      .row
+        .col-md-4#filter_card
+          .row
+            .col-12
+              .filter-heading
+                h5#filter Filtrování výsledků:
+            .col-12 
+             .accordion#accordion
+              .card
+                .card-heading.card-header role="tab"
+                  a. [id="card_heading" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed"]
+                    Item Podle druhu subjektu
+                .card-block.collapse.show#collapseOne
+                  .card-body#filter
+                    .custom-control.custom-checkbox
+                      input type="checkbox" class="custom-control-input" id="socialCheck"
+                      label class="custom-control-label" for="socialCheck" 
+                      'Subjekty poskytující sociální služby
+                    .custom-control.custom-checkbox
+                      input type="checkbox" class="custom-control-input" id="akreditCheck"
+                      label class="custom-control-label" for="akreditCheck" 
+                      'Akreditované subjekty
+                    .custom-control.custom-checkbox
+                      input type="checkbox" class="custom-control-input" id="advokatCheck"
+                      label class="custom-control-label" for="advokatCheck" 
+                      'Advokáti
+                    .custom-control.custom-checkbox
+                      input type="checkbox" class="custom-control-input" id="pmsCheck"
+                      label class="custom-control-label" for="pmsCheck" 
+                      'Střediska probační a mediační služby
+    .filters_wrapper                  
+      .row
+        .col-md-4#filter_card
+          .row
+            .col-12
+              .filter-heading
+                h5#filter Filtrování výsledků:
+            .col-12 
+             .accordion#accordion
+              .card
+                .card-heading.card-header role="tab"
+                  a. [id="card_heading" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed"]
+                    Item Podle druhu subjektu
+                .card-block.collapse.show#collapseOne
+                  .card-body#filter
+                    .custom-control.custom-checkbox
+                      input type="checkbox" class="custom-control-input" id="socialCheck"
+                      label class="custom-control-label" for="socialCheck" 
+                      'Subjekty poskytující sociální služby
+                    .custom-control.custom-checkbox
+                      input type="checkbox" class="custom-control-input" id="akreditCheck"
+                      label class="custom-control-label" for="akreditCheck" 
+                      'Akreditované subjekty
+                    .custom-control.custom-checkbox
+                      input type="checkbox" class="custom-control-input" id="advokatCheck"
+                      label class="custom-control-label" for="advokatCheck" 
+                      'Advokáti
+                    .custom-control.custom-checkbox
+                      input type="checkbox" class="custom-control-input" id="pmsCheck"
+                      label class="custom-control-label" for="pmsCheck" 
+                      'Střediska probační a mediační služby
       .col-md-8
         .results_cards
           .card.mx-auto
