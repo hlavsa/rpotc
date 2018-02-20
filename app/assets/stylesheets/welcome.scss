@@ -16,8 +16,8 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em; /* 1em = 16px */
   color: #3b3b3b;
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 
@@ -487,26 +487,26 @@ Item#entity {
   display: none;
 }
 
-@include media-breakpoint-up(lg) {
+@media(min-width:768px) {
   .nav-tabs#subjects  {
     display: flex;
   }
 
-  .card .subjects_tabs {
+  .card {
     border: none;
     background-color: #eaf0f5;
   }
 
-  .card .card-header .subjects_tabs {
+  .card .card-header {
     display: none;
   }  
 
-  .card .subjects_tabs .collapse {
+  .card .collapse {
     display: block;
   }
 }
 
-@include media-breakpoint-down(md) {
+@media(max-width:767px) {
   .tab-pane {
     display: block !important;
     opacity: 1;
