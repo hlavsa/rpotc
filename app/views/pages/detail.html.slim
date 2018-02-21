@@ -1,7 +1,7 @@
 - content_for(:title) do
   JarkoSekundoJakSvine
 section
-  .container
+  .container id="content" tabindex="-1"
     .row
       .col-md-6.col-4
         .redirect
@@ -29,7 +29,7 @@ section
     /         'Hledat znovu
     /         i.fa.fa-long-arrow-right.fa-fw
   .container#results
-    .collapsable_wrapper
+    .results_wrapper                  
       .row
         .col-md-4#filter_card
           .row
@@ -38,40 +38,8 @@ section
                 h5#filter Filtrování výsledků:
             .col-12 
              .accordion#accordion
-              .card
-                .card-heading.card-header role="tab"
-                  a. [id="card_heading" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed"]
-                    Item Podle druhu subjektu
-                .card-block.collapse.show#collapseOne
-                  .card-body#filter
-                    .custom-control.custom-checkbox
-                      input type="checkbox" class="custom-control-input" id="socialCheck"
-                      label class="custom-control-label" for="socialCheck" 
-                      'Subjekty poskytující sociální služby
-                    .custom-control.custom-checkbox
-                      input type="checkbox" class="custom-control-input" id="akreditCheck"
-                      label class="custom-control-label" for="akreditCheck" 
-                      'Akreditované subjekty
-                    .custom-control.custom-checkbox
-                      input type="checkbox" class="custom-control-input" id="advokatCheck"
-                      label class="custom-control-label" for="advokatCheck" 
-                      'Advokáti
-                    .custom-control.custom-checkbox
-                      input type="checkbox" class="custom-control-input" id="pmsCheck"
-                      label class="custom-control-label" for="pmsCheck" 
-                      'Střediska probační a mediační služby
-                      
-    .filters_wrapper                  
-      .row
-        .col-md-4#filter_card
-          .row
-            .col-12
-              .filter-heading
-                h5#filter Filtrování výsledků:
-            .col-12 
-             .accordion#accordion
-              .card
-                .card-heading.card-header role="tab"
+              .card#results_filtering
+                .card-heading.card-header#filter_heading role="tab"
                   a. [id="card_heading" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed"]
                     Item Podle druhu subjektu
                 .card-block.collapse.show#collapseOne

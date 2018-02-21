@@ -16,8 +16,6 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em; /* 1em = 16px */
   color: #3b3b3b;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 
@@ -65,7 +63,7 @@ h3 {
   line-height: 1.04;
   font-family: 'Roboto Condensed', sans-serif;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     padding-top: 30px;
     margin-bottom: 20px;
   }
@@ -421,19 +419,19 @@ h5#filter {
   margin-bottom: 0px !important;
 }
 
-.card-header:after {
-  font-family: 'FontAwesome';  
-  content: "\f068";
-  color: #3b3b3b;
-  float: right; 
-}
+// .h5.mb-0#card_title > a:before {
+//   float: right !important;
+//   font-family: 'FontAwesome';
+//   content: "\f068";
+//   color: #3b3b3b;
+// }
 
-.card-header.collapsed:after {
-  font-family: 'FontAwesome';  
-  content: "\f067";
-  color: #3b3b3b;
-  float: right; 
-}
+// .h5.mb-0#card_title > a.collapsed:before {
+//   font-family: 'FontAwesome';  
+//   content: "\f067";
+//   color: #3b3b3b;
+//   float: right !important; 
+// }
 
 .custom-control.custom-checkbox {
   margin-top: 10px;
@@ -492,12 +490,12 @@ Item#entity {
     display: flex;
   }
 
-  .card {
+  .card.tab-pane.fade.subjects_tabs {
     border: none;
     background-color: #eaf0f5;
   }
 
-  .card .card-header {
+  .card .card-header.advanced_search {
     display: none;
   }  
 
@@ -546,16 +544,16 @@ a#card_heading:focus {
   }
 }
 
-.collapsable_wrapper {
-  display: none;
-}
+// .collapsable_wrapper {
+//   display: none;
+// }
 
-@include media-breakpoint-down(sm) {
-  .collapsable_wrapper {
-    display: inline;
-  }
+// @include media-breakpoint-down(sm) {
+//   .collapsable_wrapper {
+//     display: inline;
+//   }
 
-  .filters_wrapper {
-    display: none;
-  }
-}
+//   .filters_wrapper {
+//     display: none;
+//   }
+// }
