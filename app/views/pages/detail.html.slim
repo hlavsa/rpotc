@@ -35,7 +35,11 @@ section
           i.fa.fa-caret-right
           a [href="#" class="info-link"] Filtrovat vyhledávání
         javascript:
-          console.log('ahoj')
+          $(function() {
+            $('button').click(function() {
+                $(this).find('i').toggleClass('fa-caret-right fa-caret-down');
+            });
+          });
 
         .col-md-4#filter_card
           .row
