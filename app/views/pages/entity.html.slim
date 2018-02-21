@@ -2,14 +2,13 @@ section
   .container.redirect
     .row
       .col-md-6.col-xs-6
+        #BackRedirect
           i.fa.fa-long-arrow-left.fa-fw
           a. [href="detail" class="info-link"] Zpět na výpis
-      .col-md-6.col-xs-6
-        .quick_search.float-right
-          form.form-inline
-            input.form-control.form-control [type="search" placeholder="Rychlé vyhledávání" aria-label="Search" title="Hledat"]
-            button.btn.btn-danger [type="submit"] 
-              i.fa.fa-search
+      .col-md-6.text-right.col-xs-6
+        #SearchRedirect
+          i.fa.fa-search
+          a. [href="home" class="info-link"] Rychlé vyhledávání
 
   .container
     h3#entity_name Diecézní charita Brno
@@ -44,7 +43,7 @@ section
             'Stáhnout údaje:
         .col-md-9.col-6
           p.card-text
-            a. [href="home" class="info-link"] Stáhnout veškeré údaje (CSV, 30KB)
+            a. [href="home" class="btn-link" id="Export"] Stáhnout veškeré údaje (CSV, 30KB)
 
   .container
     .entity_info

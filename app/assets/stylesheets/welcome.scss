@@ -248,10 +248,17 @@ button.btn {
   background-color: #fe505d; 
 }
 
-.btn-link {
+.btn-link {  
+  background-color: transparent;
+  margin-bottom: 30px;
+  border: none;
   text-decoration: underline;
   font-size: 1.188em;
   color: #fe505d;
+}
+
+.btn-link#Export {
+  font-size: 1em;
 }
 
 a:hover {
@@ -310,6 +317,14 @@ li {
 
 .redirect {
   padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+@include media-breakpoint-down(sm) {
+  #SearchRedirect {
+    text-align: left;
+    padding-top: 20px;
+  }    
 }
 
 
@@ -375,12 +390,6 @@ section#search_table {
     display: block !important;
     height: auto !important;
   }
-}
-
-.btn_link {
-  background-color: transparent;
-  margin-bottom: 30px;
-  border: none;
 }
 
 @include media-breakpoint-up(md) {
