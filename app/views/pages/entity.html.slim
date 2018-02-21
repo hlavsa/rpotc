@@ -53,7 +53,14 @@ section
             .card#entity
               .card-heading.card-header role="tab"
                 a. [id="card-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapseOne" class="collapsed"]
+                  i.fa.fa-plus
                   Item#entity Místo poskytování služeb (2)
+                javascript:
+                  $(function() {
+                    $('a').click(function() {
+                        $(this).find('i').toggleClass('fa-plus fa-times');
+                    });
+                  });
               .card-block.collapse#collapse1
                 .card-body
                   .inner_info
@@ -114,6 +121,13 @@ section
             .card
               .card-heading.card-header role="tab"
                 a. [id="card-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapseOne" class="collapsed"]
+                  i.fa.fa-plus
                   Item#entity Doplňující údaje
+                javascript:
+                  $(function() {
+                    $('a').click(function() {
+                        $(this).find('i').toggleClass('fa-plus fa-times');
+                    });
+                  });
               .card-block.collapse#collapse2
                 .card-body

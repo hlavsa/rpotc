@@ -453,20 +453,6 @@ h5#filter {
   margin-bottom: 0px !important;
 }
 
-// .h5.mb-0#card_title > a:before {
-//   float: right !important;
-//   font-family: 'FontAwesome';
-//   content: "\f068";
-//   color: #3b3b3b;
-// }
-
-// .h5.mb-0#card_title > a.collapsed:before {
-//   font-family: 'FontAwesome';  
-//   content: "\f067";
-//   color: #3b3b3b;
-//   float: right !important; 
-// }
-
 .custom-control.custom-checkbox {
   margin-top: 10px;
 }
@@ -582,4 +568,14 @@ a#card_heading:focus {
   .btn_link {
     display: none;
   }
+}
+
+i.fa {
+  padding-right: 5px;
+}
+
+.card-heading.card-header .fa {
+  font-size: 1.188em;
+  padding-right: 15px;
+  color: #5E6F7F;
 }

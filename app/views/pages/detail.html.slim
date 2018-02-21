@@ -10,7 +10,7 @@ section
       .col-md-6.text-right.col-8
         .redirect
           a. [href="advanced_search" class="info-link"] Rozšířené vyhledávání
-          
+
   .container#search-results-bar
     form.form-inline
       p#searched
@@ -33,12 +33,12 @@ section
     .results_wrapper                  
       .row
         button class="btn_link" type="button" data-toggle="collapse" data-target="#filter_card" aria-expanded="false" aria-controls="collapseFilters" id="FilterSearchCollapse"
-          i.fa.fa-caret-right
+          i.fa.fa-plus
           a [href="#" class="info-link"] Filtrovat vyhledávání
         javascript:
           $(function() {
             $('button').click(function() {
-                $(this).find('i').toggleClass('fa-caret-right fa-caret-down');
+                $(this).find('i').toggleClass('fa-plus fa-times');
             });
           });
 
