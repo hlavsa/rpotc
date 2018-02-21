@@ -360,8 +360,33 @@ section#search_table {
   margin-bottom: 30px;
 }
 
-.col-md-4#filter_card {
-  margin-bottom: 1.250rem; /* 20px */
+@include media-breakpoint-down(md) {
+  .col-md-4#filter_card {
+    margin-bottom: 1.250rem; /* 20px */
+    display: none;
+  }
+
+  .col-md-4.collapsing#filter_card {
+      display: block !important;
+      height: auto !important;
+  }
+
+  .col-md-4.collapse.show#filter_card {
+    display: block !important;
+    height: auto !important;
+  }
+}
+
+.btn_link {
+  background-color: transparent;
+  margin-bottom: 30px;
+  border: none;
+}
+
+@include media-breakpoint-up(md) {
+  #FilterSearchCollapse {
+    display: none;
+  }
 }
 
 p#searched {
@@ -499,7 +524,7 @@ Item#entity {
     display: none;
   }  
 
-  .card .collapse {
+  .card .collapse[role="tabpanel"] {
     display: block;
   }
 }
@@ -544,16 +569,8 @@ a#card_heading:focus {
   }
 }
 
-// .collapsable_wrapper {
-//   display: none;
-// }
-
-// @include media-breakpoint-down(sm) {
-//   .collapsable_wrapper {
-//     display: inline;
-//   }
-
-//   .filters_wrapper {
-//     display: none;
-//   }
-// }
+@include media-breakpoint-up(md) {
+  .btn_link {
+    display: none;
+  }
+}

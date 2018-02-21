@@ -31,6 +31,12 @@ section
   .container#results
     .results_wrapper                  
       .row
+        button class="btn_link" type="button" data-toggle="collapse" data-target="#filter_card" aria-expanded="false" aria-controls="collapseFilters" id="FilterSearchCollapse"
+          i.fa.fa-caret-right
+          a [href="#" class="info-link"] Filtrovat vyhledávání
+        javascript:
+          console.log('ahoj')
+
         .col-md-4#filter_card
           .row
             .col-12
