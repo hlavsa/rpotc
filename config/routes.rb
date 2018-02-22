@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   get 'pages/detail'
   get 'pages/entity'
   get 'pages/advanced_search'
-  get 'pages/legislation'
   get 'pages/accreditation_form'
 
   root to: 'pages#home'

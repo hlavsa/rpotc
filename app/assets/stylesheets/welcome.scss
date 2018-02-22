@@ -37,6 +37,38 @@ body {
   z-index: 3;
 }
 
+// a.nav-link:hover {
+//   box-shadow: inset 0 0px 0 white, inset 0 -1px 0 #3b3b3b;
+// }
+
+a.nav-link {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.nav-link:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #3b3b3b60;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+a.nav-link:hover:before {
+  background-color: #3b3b3b98;
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
 /*  headings  */
 
 h2 {  
@@ -47,7 +79,7 @@ h2 {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-h2#main {  
+h2#Main {  
   padding-top: 5px;
   margin-bottom: 40px;
   font-size: 3em;
@@ -97,10 +129,9 @@ h4#entity_info {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-h5#register {
+h5#Register {
   padding-top: 60px;
   font-size: 1em;
-  font-family: 'Open Sans', sans-serif;
   color: #6B6B70;
 }
 
@@ -220,7 +251,7 @@ input.form-control {
     }
 }
 
-#mobile_placeholder {
+#MobilePlaceholder {
   padding-top: 10px;
   font-size: 0.875em;
   color: #3b3b3b70;
@@ -238,14 +269,18 @@ button.btn {
   position: relative;
 }
 
+#AdvancedSearchRedirect {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border: none;
+  background-color: transparent; 
+}
+
 .btn-lg {
   background-color: #fe505d; 
 }
 
 .btn-link {  
-  background-color: transparent;
-  margin-bottom: 30px;
-  border: none;
   text-decoration: underline;
   font-size: 1.188em;
   color: #fe505d;
@@ -364,7 +399,7 @@ section#search_table {
   padding: 3em;
 }
 
-.container#results {
+#ResultsContainer {
   padding-top: 20px;
   margin-bottom: 30px;
 }
@@ -392,14 +427,14 @@ section#search_table {
   }
 }
 
-p#searched {
+p#Searched {
   padding-top: 13px;
   padding-left: 0.8em;
   padding-right: 0.8em;
   font-size: 1em;
 }
 
-.container#search-results-bar {
+.container#SearchResultsBar {
   padding-top: 1em;
   margin-bottom: 20px;
   display: block;
@@ -575,9 +610,21 @@ i.fa {
   color: #5E6F7F;
 }
 
-.btn_link {
+.btn_filter {
   background-color: transparent;
   border: 0;
   margin-bottom: 30px;
   padding-left: 10px;
 }
+
+#PageTitle {
+  font-size: 1.188em;
+  color: #3b3b3b;
+  text-align: center;
+  font-weight: bold;
+  max-width: 20em;
+}
+
+// .innerContent {
+//   padding-top: 50px;
+// }

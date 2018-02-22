@@ -11,9 +11,9 @@ section
         .redirect
           a. [href="advanced_search" class="info-link"] Rozšířené vyhledávání
 
-  .container#search-results-bar
+  .container#SearchResultsBar
     form.form-inline
-      p#searched
+      p#Searched
         strong Nalezené výsledky (2) pro
       input.form-control.form-control [type="search" placeholder="novak" aria-label="Search" title="Hledat" id="advanced_search_bar"]
       button.btn.btn-danger [type="submit"] 
@@ -29,10 +29,10 @@ section
     /       button.btn.btn-danger [type="submit"] 
     /         'Hledat znovu
     /         i.fa.fa-long-arrow-right.fa-fw
-  .container#results
+  .container#ResultsContainer
     .results_wrapper                  
       .row
-        button class="btn_link" type="button" data-toggle="collapse" data-target="#filter_card" aria-expanded="false" aria-controls="collapseFilters" id="FilterSearchCollapse"
+        button class="btn_filter" type="button" data-toggle="collapse" data-target="#filter_card" aria-expanded="false" aria-controls="collapseFilters" id="FilterSearchCollapse"
           i.fa.fa-plus
           a [href="#" class="info-link"] Filtrovat vyhledávání
         javascript:
@@ -49,10 +49,18 @@ section
                 h5#filter Filtrování výsledků:
             .col-12 
              .accordion#accordion
-              .card#results_filtering
+              .card#ResultsFiltering
                 .card-heading.card-header#filter_heading role="tab"
                   a. [id="card_heading" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed"]
+                    i.fa.fa-times
                     Item Podle druhu subjektu
+                  javascript:
+                    $(function() {
+                      $('a').click(function() {
+                          $(this).find('i').toggleClass('fa-times fa-plus');
+                      });
+                    });
+
                 .card-block.collapse.show#collapseOne
                   .card-body#filter
                     .custom-control.custom-checkbox
