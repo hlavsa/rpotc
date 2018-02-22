@@ -59,3 +59,5 @@ gem 'slim-rails'
 gem 'font-awesome-rails'
 
 gem 'react-rails'
+
+gem 'material-icons-rails'
